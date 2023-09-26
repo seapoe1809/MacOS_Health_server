@@ -1,3 +1,4 @@
+## In Build Process. Not ready for use ##
 Mac_Health_Server is DARNA.HI V2 for MacOS
 
 DEMO version with features turned off: https://seapoe1809.pythonanywhere.com/login
