@@ -80,29 +80,31 @@ def run_common_commands():
 
 def run_brew_commands():
     subprocess.run(['brew', 'upgrade'])
-    subprocess.run(['brew', 'install', 'rsync', 'caffeine', 'python@3.9', 'docker'])
+    subprocess.run(['brew', 'install', 'rsync', 'caffeine', 'python@3.9', 'docker', 'tesseract', 'poppler'])
     run_common_commands()
 
 def run_apt_commands():
     subprocess.run(['sudo', 'apt-get', 'update'])
-    subprocess.run(['sudo', 'apt-get', 'install', '-y', 'rsync', 'caffeine', 'python3-pip', 'docker.io'])
+    subprocess.run(['sudo', 'apt-get', 'install', '-y', 'rsync', 'caffeine-indicator', 'python3-pip', 'docker.io', 'tesseract-ocr', 'poppler-utils'])
     run_common_commands()
 
 def run_dnf_commands():
-    subprocess.run(['sudo', 'dnf', 'install', '-y', 'rsync', 'python3-pip', 'caffeine-ng', 'docker'])
+    subprocess.run(['sudo', 'dnf', 'install', '-y', 'rsync', 'python3-pip', 'caffeine-ng', 'docker', 'tesseract', 'poppler-utils'])
     run_common_commands()
 
 def run_yum_commands():
-    subprocess.run(['sudo', 'yum', 'install', '-y', 'rsync', 'python3-pip', 'docker'])
+    # For CentOS/RHEL 7 and below
+    subprocess.run(['sudo', 'yum', 'install', '-y', 'rsync', 'python3-pip', 'docker', 'tesseract', 'poppler-utils'])
     run_common_commands()
 
 def run_pacman_commands():
-    subprocess.run(['sudo', 'pacman', '-S', '--noconfirm', 'rsync', 'python-pip', 'caffeine-ng', 'docker'])
+    subprocess.run(['sudo', 'pacman', '-S', '--noconfirm', 'rsync', 'python-pip', 'caffeine-ng', 'docker', 'tesseract', 'poppler'])
     run_common_commands()
 
 def run_zypper_commands():
-    subprocess.run(['sudo', 'zypper', 'install', '-y', 'rsync', 'python3-pip', 'docker'])
+    subprocess.run(['sudo', 'zypper', 'install', '-y', 'rsync', 'python3-pip', 'docker', 'tesseract', 'poppler-tools'])
     run_common_commands()
+
 
 def run_platform_specific_commands():
     system_name = platform.system().lower()
@@ -250,7 +252,7 @@ with open(temp_script_path, 'w') as file:
 # Execute the temporary script using osascript
 subprocess.run(['osascript', temp_script_path])
 # delete the temporary script file
-os.remove(temp_script_path)
+#os.remove(temp_script_path)
 
 #lets all the above startup and subsequently opens browser
 print('        🏃🏃 Waiting for final leg of installation to complete 🏃🏃')
