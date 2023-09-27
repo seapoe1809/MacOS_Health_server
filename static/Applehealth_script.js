@@ -1,16 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const appInfo = {
-        App_name: 'Applehealth',  // Replace with the actual app name
-        app_folder: 'Applehealth'       // Replace with the actual image folder
-    };
-
-    // Get the install link element"""WILL be in static folder, linking to install.html and subsequently to install_module"
-    const installLink = document.getElementById('Applehealth-link');
-
-    // Add a click event handler to the link
-    installLink.addEventListener('click', function() {
-        const installUrl = `/install?app_name_file=${appInfo.App_name}&app_folder=${appInfo.app_folder}`;
-        window.open(installUrl, '_blank');
-    });
-});
+            var link = document.getElementById('Applehealth-link');
+            var currentIp = window.location.hostname;  // Get the current IP address
+            var newPort = '3000';  // New port number
+            
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                var newUrl = 'http://' + currentIp + ':' + newPort;
+                window.open(newUrl, '_blank');
+            });
+        });
 
