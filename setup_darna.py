@@ -220,7 +220,7 @@ with open(file_path, 'w') as file:
 #Wite AppleScript content
 applescript_content = f"""
 tell application "Terminal"
-    do script "cd {HS_path}; source darnavenv/bin/activate; nohup python3 da.py &"
+    do script "cd {HS_path}; source darnavenv/bin/activate; nohup python3 darna.py &"
 end tell
 """
 
@@ -235,7 +235,7 @@ with open(file_path, 'w') as file:
 set_icon_script = f"""
 tell application "Finder"
     set iconPath to POSIX file "{HS_path}/static/favicon.icns" as alias
-    set scriptPath to POSIX file "{HS_path}/da_launch.scpt" as alias
+    set scriptPath to POSIX file "{HS_path}/darna_launch.scpt" as alias
     set scriptFile to (scriptPath as text)
     set iconFile to (iconPath as text)
     set icon of file scriptFile to icon of file iconFile
@@ -257,21 +257,17 @@ print('        🏃🏃 Waiting for final leg of installation to complete 🏃�
 
 
 #run caffeine as subprocess in background, start flask server and open browser with address.
-caffeine1 = subprocess.run(caffeine_command, shell=True, text=True, capture_output=True)
-if caffeine1.returncode != 0:
-    print(f"Failed to run command: {result.stderr}")
-else:
-    print(f"Success: {result.stdout}")
-
+caffeine_command= "caffeinate &"
+subprocess.run(caffeine_command, shell=True)
 
 subprocess.run(['./darna_launch.sh'], shell=True)
 print('        ☕ The server will be available at: ☕')
 print(f"       ☕ On other devices, http://{ip_address}:3001 ☕ ")
 print("        ☕ On same computer access at http://localhost:3001 ☕ ")
 print("        ☝ One more thing to know:")
-print("              🢡The ADMIN password is 'health'🢤")
-print("              🢡The USER1 password is 'wellness'🢤")
-print("              🢡password can be changed under 'INFORMATION' card🢤")
+print("              ☝The ADMIN password is 'health'☝")
+print("              ☝The USER1 password is 'wellness'☝")
+print("              ☝password can be changed under 'INFORMATION' card☝")
 webbrowser.open(url)
 
 
