@@ -45,6 +45,10 @@ Please note that this is only the second version of the project, and I plan on a
 
 Make sure you have python3. If not go to https://www.python.org/. Once done do the following:
 
+Open Terminal. To open it, go to Launchpad (usually 2nd icon from left on dock that opens a page with severall apps). Type terminal and double click on it
+
+    cd Desktop
+
 Install Homebrew. This is a package manager for Mac: 
  (skip this step if brew already installed)
  
@@ -54,19 +58,13 @@ Install Homebrew. This is a package manager for Mac:
               
     git clone https://github.com/seapoe1809/Health_server
 
- Make sure pip is installed to help install python modules 
- (skip this step if pip is already installed)
-
-    sudo apt-get install python3-pip
-
 Change directory into the Health_server directory
               
     cd MacOS_Health_server
 
 Now install 'distro' and subsequently run Setup. This should also start your Server.
 
-    pip install distro
-              
+    pip install distro              
               
     python3 setup_darna.py
 
@@ -92,19 +90,6 @@ f)  The default username password: ADMIN 'health' and USER1 'wellness'. You coul
 
 **Troubleshooting**
 ===================
-If you encounter the missing module _sqlite3 error when you start venv. Its a known error with older python Venv. You might need to uninstall python3 and reinstall. Its preferred if you download directly from python.org. 
-
-    brew update
-    sudo apt install libsqlite3-dev
-    sudo apt install python3 python3-venv
-
-You can check with:
-
-    python3
-    import sqlite3
- 
-OR 
-Build python3 from source: https://github.com/seapoe1809/assets/blob/main/Python_from_source_LINUX
 
 The default username password: ADMIN 'health' and USER1 'wellness'. You could change it 'Information' card if you wish.
 
