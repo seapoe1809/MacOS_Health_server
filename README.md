@@ -68,7 +68,14 @@ Now install 'distro' and subsequently run Setup. This should also start your Ser
               
     python3 setup_darna.py
 
-The server should be active at port :3001. The flask server when launched will give you the IP address at which it launched. You could now navigate to that http://your_ip_adddress:3001 with any mobile device and access the server.             
+The server should be active at port :3001. The flask server when launched will give you the IP address at which it launched. You could now navigate to that http://your_ip_adddress:3001 with any mobile device and access the server.    
+
+    ./setup_run.sh
+    brew python 3.9
+    python3 -m ensurepip --default-pip
+    pip3 install distro
+    cd DARNA.app/Contents/Resources
+    python3 setup_darna.py
         
 To give feedback, please go to 'Information' card and send email to me. Or you could start a debug here itself.
 
