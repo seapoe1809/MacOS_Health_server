@@ -73,6 +73,8 @@ The server should be active at port :3001. The flask server when launched will g
     ./setup_run.sh
     brew python 3.9
     python3 -m ensurepip --default-pip
+    alias pip=‘pip3’
+    pip install —upgrade pip
     pip3 install distro
     cd DARNA.app/Contents/Resources
     python3 setup_darna.py
