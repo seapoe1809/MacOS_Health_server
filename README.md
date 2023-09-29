@@ -101,7 +101,12 @@ f)  The default username password: ADMIN 'health' and USER1 'wellness'. You coul
 ===================
 
 The default username password: ADMIN 'health' and USER1 'wellness'. You could change it 'Information' card if you wish.
-
+**Unidentified app downloaded** error
+- on top of the screen on desktop, go to menubar and click on apple icon
+- Go to system preferences
+- On 'General' tab, click on allow Darna app to run.
+- Go back to desktop and double click on DARNA.app tp launch
+- 
 <img src="https://github.com/seapoe1809/assets/blob/main/DARNA_HI_v2_assets/1-2-3.png" width =300, height=550>
 
 
